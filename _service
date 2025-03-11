@@ -1,0 +1,10 @@
+<services>
+  <service name="cpanspec" mode="manual">
+    <param name="source">Padre</param>
+  </service>
+  <service name="perl_regex" mode="manual">
+    <param name="regexfile">main.pl</param>
+    <param name="file">perl-Padre.spec</param>
+  </service>
+
+</services>
