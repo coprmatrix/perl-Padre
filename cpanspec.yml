@@ -8,7 +8,7 @@
 #  - source1
 #  - source2
 patches:
-  huakim.diff: 
+  huakim.diff: -p1
 #  bar.patch:
 #  baz.patch: PATCH-FIX-OPENSUSE
 preamble: |-
