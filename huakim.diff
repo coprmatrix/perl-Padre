@@ -37,7 +37,7 @@ index bec984e2f..fecfe681f 100644
  					#Gnome-Terminal line format:
  					#gnome-terminal -e "bash -c \"prove -lv t/96_edit_patch.t; exec bash\""
 -					system qq($ENV{COLORTERM} -e "bash -c \\\"$cmd; exec bash\\\"" & );
-+					system $terminals[0] . " " . qq(-e "bash -c \\\"$cmd; exec bash\\\"" & );
++					system $terminals[0] . " " . qq(-e "bash -c \\\"$cmd; read -n 1; exit\\\"" & );
  				} else {
  					system qq(xterm -sb -e "$cmd; sleep 1000" &);
  				}
