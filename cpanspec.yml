@@ -7,13 +7,15 @@
 #sources:
 #  - source1
 #  - source2
-#patches:
-#  foo.patch: -p1
+patches:
+  huakim.diff: 
 #  bar.patch:
 #  baz.patch: PATCH-FIX-OPENSUSE
 preamble: |-
  BuildArch: noarch
-#post_prep: |-
+ BuildRequires: sed
+post_prep: |-
+ sed -i 's~:miniframe~~' lib/Padre/Wx/Constant.pm
 # hunspell=`pkg-config --libs hunspell | sed -e 's,-l,,; s,  *,,g'`
 # sed -i -e "s,hunspell-X,$hunspell," t/00-prereq.t Makefile.PL 
 #post_build: |-
